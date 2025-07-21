@@ -1,8 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:utilidades/src/app/app_widget.dart';
+import 'package:utilidades/src/views/counter_cubit.dart';
 
 void main() {
   runApp(AppWidget());
+
+  /* 
+    riverpod - é uma biblioteca de gerenciamento de estado desenvolvida por Remi Rousselet (criador do provider). ele foi criado para corrigir limitações do provider e oferecer uma abordagem mais robusca, segura e flexível.
+
+    vantagens
+    - seguro em tempo de compilação: detecta erros mais cedo
+    - não depende de BuildContext
+    - testável e modular
+    - suporte nativo para provider assincronos. Como FutureProvider e StreamProvider
+    
+    para usar precisamos instalar o pacote flutter_riverpod
+
+    --------------------------------------------
+
+    BLoC - Business Logic Component
+    é um padrão de arquitetura que separa a lógica de negócios da interface de usuário usando streams.
+    Ele foi criado pelo google para facilitar o reuso da lógica em vários widgets.
+
+    vantagens 
+    - muito usado em apps corporativos 
+    - força uma arquitetura bem definida
+    - baseado em streams
+
+    conceitos principais
+    - event: entrada enviada pelo usuário
+    - state: saidá do bloco
+    - bloc: recebe eventos e emite estados
+
+    para usar precisamos instalar o pacote flutter_bloc
+
+    bloc + cubit 
+
+    cubit é uma versão mais simples e direta do bloc, sem eventos, você apenas chama métodos e emite estados diretamente
+   */
+
+  // runApp(myApp());
+}
+
+class myApp extends StatelessWidget {
+  const myApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BlocProvider(
+        create: (_) => CounterCubit(),
+        child: CounterPage(),
+        ),
+    );
+  }
 }
 
 

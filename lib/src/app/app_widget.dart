@@ -12,7 +12,7 @@ class AppWidget extends StatelessWidget {
       title: "Utilidades",
       initialRoute: "/home",
       routes: {
-        "/login": (context) => LoginView(),
+        // "/login": (context) => LoginView(),
         ...generateRoutes()
       },
     );

@@ -19,7 +19,7 @@ class CustomAppDrawer extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: 30),
               child: Center(
-                child: Image.asset("assets/images/utility.png", width: 150,),
+                child: Image.asset("./assets/images/utility.png", width: 150,),
               ),
             ),
           ),

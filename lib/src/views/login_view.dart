@@ -74,7 +74,7 @@ class _LoginViewState extends State<LoginView> {
           children: [
             Padding(
               padding: EdgeInsets.only(bottom: 30),
-              child: Image.asset("assets/images/utility.png", width: 200,),
+              child: Image.asset("./assets/images/utility.png", width: 200,),
             ),
             TextField(
               controller: _usernameController,
